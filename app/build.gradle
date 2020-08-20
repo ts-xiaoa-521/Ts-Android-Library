@@ -30,8 +30,16 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //android动态权限申请
     implementation project(':ts_permission')
+    //Glide相关方法封装
     implementation project(':ts_glide')
+
+    //android动态权限申请
+//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_permission:1.0.0'
+    //Glide相关方法封装
+//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_glide:1.0.0'
+
     //kotlin ktx lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
     testImplementation 'junit:junit:4.13'

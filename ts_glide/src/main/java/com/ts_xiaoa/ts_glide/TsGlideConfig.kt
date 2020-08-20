@@ -5,9 +5,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 /**
  * create by ts_xiaoA on 2020-08-20 09:29
  * email：443502578@qq.com
- * desc：
+ * desc：Glide相关配置
  */
-object TsGlideConfig {
+class TsGlideConfig private constructor() {
     //默认占位图
     var defaultImagePlaceHolder: Int = R.drawable.ts_default_img_place_holder
 
@@ -19,4 +19,9 @@ object TsGlideConfig {
 
     //默认缓存方式
     var defaultDiskCacheStrategy: DiskCacheStrategy = DiskCacheStrategy.RESOURCE
+
+    companion object {
+        //单例
+        val instance: TsGlideConfig by lazy(LazyThreadSafetyMode.SYNCHRONIZED) { TsGlideConfig() }
+    }
 }

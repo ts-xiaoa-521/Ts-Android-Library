@@ -2,7 +2,6 @@ package com.ts_xiaoa.ts_glide
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -77,17 +76,47 @@ fun ImageView.loadHeadImage(
 }
 
 
-//获取第一帧
-//suspend fun RequestManager.getFramePath(path: Any, frameTime: Long = 1000): String {
-//    return withContext(Dispatchers.IO) {
-//        this@getFramePath.setDefaultRequestOptions(
-//            RequestOptions()
-//                .frame(frameTime * 1000) //单位微秒
-//        ).asFile()
-//            .diskCacheStrategy(DiskCacheStrategy.DATA)
-//            .load(path)
-//            .submit()
-//            .get()
-//            .path
-//    }
-//}
+//加载指定视频帧数图片
+fun ImageView.loadCenterCropVideoFrame(
+    url: Any?,
+    frameTime: Long = 1000,
+    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+) {
+    val options = RequestOptions()
+        .centerCrop()
+        .placeholder(defaultImagePlaceHolder) //占位图
+        .error(defaultImageError) //错误图
+        .override(this@loadCenterCropVideoFrame.width, this@loadCenterCropVideoFrame.height)
+        .dontAnimate()
+        .diskCacheStrategy(defaultDiskCacheStrategy)
+    Glide.with(context!!)
+        .setDefaultRequestOptions(
+            RequestOptions().frame(frameTime * 1000) //单位微秒
+        )
+        .load(url).apply(options).into(this)
+}
+
+
+//加载指定视频帧数图片
+fun ImageView.loadFitCenterVideoFrame(
+    url: Any?,
+    frameTime: Long = 1000,
+    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+) {
+    val options = RequestOptions()
+        .fitCenter()
+        .placeholder(defaultImagePlaceHolder) //占位图
+        .error(defaultImageError) //错误图
+        .override(this@loadFitCenterVideoFrame.width, this@loadFitCenterVideoFrame.height)
+        .dontAnimate()
+        .diskCacheStrategy(defaultDiskCacheStrategy)
+    Glide.with(context!!)
+        .setDefaultRequestOptions(
+            RequestOptions().frame(frameTime * 1000) //单位微秒
+        )
+        .load(url).apply(options).into(this)
+}
