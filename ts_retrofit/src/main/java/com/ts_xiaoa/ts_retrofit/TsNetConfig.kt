@@ -8,7 +8,7 @@ import com.ts_xiaoa.ts_retrofit.interceptor.ResultCodeInterceptor
  * email：443502578@qq.com
  * desc：网络相关配置
  */
-class TsNetConfig private constructor() {
+open class TsNetConfig private constructor() {
 
     //默认成功的mode
     var successCode = 200
@@ -19,6 +19,14 @@ class TsNetConfig private constructor() {
     //默认网络错误处理对象
     var netErrorHandle: ((code: Int, msg: String?) -> Unit) = { code, msg ->
         Log.e("Net errorMessage", "$code\t$msg")
+    }
+
+    //添加网路数据结果拦截
+    fun addNetResultInterceptor(resultCodeInterceptor: ResultCodeInterceptor) {
+        if (resultInterceptorList == null) {
+            resultInterceptorList = mutableListOf()
+        }
+        resultInterceptorList?.add(resultCodeInterceptor)
     }
 
     companion object {

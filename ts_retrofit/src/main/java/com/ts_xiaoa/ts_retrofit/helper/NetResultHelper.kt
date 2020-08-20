@@ -1,7 +1,7 @@
 package com.ts_xiaoa.ts_retrofit.helper
 
 import com.ts_xiaoa.ts_retrofit.TsNetConfig
-import com.ts_xiaoa.ts_retrofit.bean.IHttpResult
+import com.ts_xiaoa.ts_retrofit.bean.INetResult
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Deferred
 import retrofit2.HttpException
@@ -15,7 +15,7 @@ import javax.net.ssl.SSLException
 /**
  * create by ts_xiaoA on 2020-08-20 11:31
  * email：443502578@qq.com
- * desc：
+ * desc：网络结果处理
  */
 
 //获取网络数据
@@ -25,19 +25,19 @@ suspend fun <T> Deferred<T>.awaitNet(
 ): T? {
     return try {
         val result = this.await()
-        if (result is IHttpResult<*>) {
+        if (result is INetResult<*>) {
             //先处理需要拦截的特殊code
             TsNetConfig.instance.resultInterceptorList?.map {
-                if (it.getCode().contains(result.getCode())) {
-                    if (it.dispatchResult()) {
+                if (it.getCode() == result.getResultCode()) {
+                    if (it.interceptResult(result = result as INetResult<*>)) {
                         throw CancellationException()
                     }
                 }
             }
-            if (result.getCode() == TsNetConfig.instance.successCode) {
+            if (result.getResultCode() == TsNetConfig.instance.successCode) {
                 result
             } else {
-                throw ServerException(result.getCode(), result.getMessage())
+                throw ServerException(result.getResultCode(), result.getResultMessage())
             }
         } else {
             result

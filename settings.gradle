@@ -1,3 +1,5 @@
+include ':ts_widget'
+include ':ts_base'
 include ':ts_retrofit'
 include ':ts_glide'
 include ':ts_permission'

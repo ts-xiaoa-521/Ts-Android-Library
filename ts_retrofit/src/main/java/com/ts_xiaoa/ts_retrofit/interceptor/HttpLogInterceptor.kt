@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
  * email：443502578@qq.com
  * desc：日志拦截器
  */
-class HttpInterceptor : Interceptor {
+class HttpLogInterceptor : Interceptor {
 
     private val UTF8: Charset = Charset.forName("UTF-8")
 

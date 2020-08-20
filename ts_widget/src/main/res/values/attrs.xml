@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--评分五角星-->
+    <declare-styleable name="StarBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+        <!--星星选择的数量-->
+        <attr name="starSelectCount" format="float" />
+        <!--是否可以选择-->
+        <attr name="startSelectEnable" format="boolean" />
+    </declare-styleable>
+
+    <!--设置图片相关如：drawableStart -->
+    <declare-styleable name="RichTextView">
+        <attr name="rtv_drawable_width" format="dimension" />
+        <attr name="rtv_drawable_height" format="dimension" />
+        <attr name="rtv_line_flag">
+            <enum name="delete" value="1" />
+            <enum name="under" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RichButton">
+        <attr name="rbtn_drawable_width" format="dimension" />
+        <attr name="rbtn_drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RichEditText">
+        <attr name="ret_drawable_width" format="dimension" />
+        <attr name="ret_drawable_height" format="dimension" />
+    </declare-styleable>
+    <!--设置图片相关如：drawableStart -->
+
+    <!--可以设置最大高度的recyclerView-->
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--banner指示器-->
+    <declare-styleable name="BannerIndicatorView">
+        <attr name="indicator_color" format="color" />
+        <attr name="indicator_selected_color" format="color" />
+        <attr name="indicator_size" format="dimension" />
+        <attr name="indicator_space" format="dimension" />
+    </declare-styleable>
+
+    <!--验证码输入框-->
+    <declare-styleable name="InputCodeView">
+        <!--验证码位数-->
+        <attr name="inputCodeCount" format="integer" />
+        <!--验证码间隔-->
+        <attr name="inputCodeSpace" format="dimension" />
+        <!--背景样式-->
+        <attr name="inputCodeBackground" format="reference" />
+        <!--验证码文字大小-->
+        <attr name="inputCodeTextSize" format="dimension" />
+        <!--验证码文字颜色-->
+        <attr name="inputCodeTextColor" format="color" />
+        <!--是否为密码-->
+        <attr name="inputCodePassword" format="boolean" />
+        <!--验证码文字style 加粗正常-->
+        <attr name="inputCodeTextStyle" format="enum">
+            <enum name="bold" value="0" />
+            <enum name="normal" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

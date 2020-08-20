@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ts_xiaoa.ts_base">
+
+    <application>
+        <provider
+            android:name=".provider.ApplicationProvider"
+            android:authorities="${applicationId}.provider.ApplicationProvider"
+            android:exported="false" />
+    </application>
+</manifest>

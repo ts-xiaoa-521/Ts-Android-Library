@@ -5,13 +5,13 @@ package com.ts_xiaoa.ts_retrofit.bean
  * email：443502578@qq.com
  * desc：网络请求数据接收类实现方法
  */
-interface IHttpResult<T> {
+interface INetResult<T> {
     //code
-    fun getCode(): Int
+    fun getResultCode(): Int
 
     //message
-    fun getMessage(): String
+    fun getResultMessage(): String
 
     //data
-    fun getData(): T?
+    fun getResultData(): T?
 }

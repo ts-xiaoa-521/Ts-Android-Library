@@ -24,4 +24,12 @@
         android:scaleType="centerCrop"
         android:src="@drawable/ts_default_img_place_holder" />
 
+    <com.ts_xiaoa.ts_widget.StarBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:starCount="5"
+        app:starSelectCount="3"
+        app:starSize="12dp" />
+
 </LinearLayout>

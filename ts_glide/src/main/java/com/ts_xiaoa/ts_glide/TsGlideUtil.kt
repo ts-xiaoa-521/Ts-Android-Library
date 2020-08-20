@@ -17,9 +17,9 @@ import com.bumptech.glide.request.RequestOptions
 fun ImageView.loadCenterCropImage(
     url: Any?,
     radius: Int = 0,
-    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
-    defaultImageError: Int = TsGlideConfig.defaultImageError,
-    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+    defaultImagePlaceHolder: Int = TsGlideConfig.instance.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.instance.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.instance.defaultDiskCacheStrategy
 ) {
     val options = if (radius == 0) RequestOptions().centerCrop() else {
         RequestOptions.bitmapTransform(
@@ -41,9 +41,9 @@ fun ImageView.loadCenterCropImage(
 //加载图片FitCenter
 fun ImageView.loadFitCenterImage(
     url: Any?,
-    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
-    defaultImageError: Int = TsGlideConfig.defaultImageError,
-    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+    defaultImagePlaceHolder: Int = TsGlideConfig.instance.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.instance.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.instance.defaultDiskCacheStrategy
 ) {
     val options = RequestOptions()
         .fitCenter()
@@ -60,8 +60,8 @@ fun ImageView.loadFitCenterImage(
 fun ImageView.loadHeadImage(
     url: Any?,
     isCircleCrop: Boolean = true,
-    defaultImageHead: Int = TsGlideConfig.defaultImageHead,
-    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+    defaultImageHead: Int = TsGlideConfig.instance.defaultImageHead,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.instance.defaultDiskCacheStrategy
 ) {
     val options = RequestOptions().apply {
         if (isCircleCrop) {
@@ -80,9 +80,9 @@ fun ImageView.loadHeadImage(
 fun ImageView.loadCenterCropVideoFrame(
     url: Any?,
     frameTime: Long = 1000,
-    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
-    defaultImageError: Int = TsGlideConfig.defaultImageError,
-    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+    defaultImagePlaceHolder: Int = TsGlideConfig.instance.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.instance.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.instance.defaultDiskCacheStrategy
 ) {
     val options = RequestOptions()
         .centerCrop()
@@ -103,9 +103,9 @@ fun ImageView.loadCenterCropVideoFrame(
 fun ImageView.loadFitCenterVideoFrame(
     url: Any?,
     frameTime: Long = 1000,
-    defaultImagePlaceHolder: Int = TsGlideConfig.defaultImagePlaceHolder,
-    defaultImageError: Int = TsGlideConfig.defaultImageError,
-    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.defaultDiskCacheStrategy
+    defaultImagePlaceHolder: Int = TsGlideConfig.instance.defaultImagePlaceHolder,
+    defaultImageError: Int = TsGlideConfig.instance.defaultImageError,
+    defaultDiskCacheStrategy: DiskCacheStrategy = TsGlideConfig.instance.defaultDiskCacheStrategy
 ) {
     val options = RequestOptions()
         .fitCenter()
