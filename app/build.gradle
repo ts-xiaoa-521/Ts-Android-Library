@@ -24,15 +24,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     //基础常用相关方法封装
-    implementation project(':ts_base')
+//    implementation project(':ts_base')
     //android动态权限申请
-    implementation project(':ts_permission')
+//    implementation project(':ts_permission')
     //Glide相关方法封装
-    implementation project(':ts_glide')
+//    implementation project(':ts_glide')
     //retrofit相关方法封装
-    implementation project(':ts_retrofit')
+//    implementation project(':ts_retrofit')
     //常用自定义view
-    implementation project(':ts_widget')
+//    implementation project(':ts_widget')
 
     //android动态权限申请
 //    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_permission:1.0.0'

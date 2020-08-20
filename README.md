@@ -2,23 +2,29 @@
 
 #### 介绍
 常用框架、工具相关库
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+ts_base：常用工具类封装
+ts_glide：Glide常用方法封装
+ts_permission：动态申请权限
+ts_retrofit：retrofit库集成、简化使用
+ts_widget：常用自定义View
 
 #### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
+1.添加 jitpack 仓库，项目的build.gradle中添加
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        #### maven { url 'https://www.jitpack.io' }
+    }
+}
+2.添加类库，开发model中的build。gradle中添加（下方$version为版本号如：1.0.0）
+dependencies {
+        #### implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_base:$version'
+        #### implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_glide:$version'
+        #### implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_permission:$version'
+        #### implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_retrofit:$version'
+        #### implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_widget:$version'
+}
 #### 参与贡献
 
 1.  Fork 本仓库
