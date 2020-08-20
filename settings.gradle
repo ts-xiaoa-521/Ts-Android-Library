@@ -1,3 +1,4 @@
+include ':ts_ui'
 include ':ts_recycler_view'
 include ':ts_widget'
 include ':ts_base'
