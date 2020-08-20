@@ -1,0 +1,4 @@
+include ':ts_glide'
+include ':ts_permission'
+include ':app'
+rootProject.name = "Ts-Android-Library"
