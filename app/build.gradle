@@ -35,9 +35,12 @@ dependencies {
 //    implementation project(':ts_widget')
 
     //android动态权限申请
-//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_permission:1.0.0'
+//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_permission:1.0.1'
     //Glide相关方法封装
-//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_glide:1.0.0'
+//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_glide:1.0.1'
+
+
+    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_ui:1.0.5'
 
     //kotlin ktx lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
