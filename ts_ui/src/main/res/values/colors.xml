@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64A0FA</color>
+    <color name="colorPrimaryDark">#4472C4</color>
+    <color name="colorAccent">#4472C4</color>
+    <color name="colorWindowBg">#f5f5f5</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorTitle">#1C1F22</color>
+    <color name="colorTitleAction">#333333</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlack_80">#cc000000</color>
+    <color name="colorOrange">#FF8100</color>
+    <color name="colorTextColor">#22222a</color>
+    <color name="colorTextColorHint">#A9A8A8</color>
+    <color name="colorCancel">#737787</color>
+    <color name="colorGray">#737787</color>
+    <color name="colorLine">#cccccc</color>
+    <color name="colorBtn">#FF8100</color>
+    <color name="colorTextOrange">#ff8100</color>
+    <color name="color66">#666666</color>
+    <color name="colorTextTabSelected">#4879CD</color>
+    <color name="colorTextTabNormal">#323232</color>
+    <color name="colorWheelNormal">#FF999999</color>
+    <color name="colorWheelSelected">#FF7517</color>
+</resources>

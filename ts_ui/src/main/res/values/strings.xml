@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ts_kotlin_lib</string>
+    <string name="ts_null_data">@null</string>
+    <string name="ts_nothing_more">没有更多了</string>
+    <string name="ts_nothing_data">没有相关数据</string>
+    <string name="ts_digits_number">0123456789</string>
+    <string name="ts_digits_price">0123456789.</string>
+    <string name="ts_hint_password">请输入密码</string>
+    <string name="ts_hint_phone">请输入手机号</string>
+    <string name="ts_hint_code">请输入验证码</string>
+    <string name="ts_digits_num_letter">qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM</string>
+</resources>

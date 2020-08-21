@@ -15,7 +15,7 @@ import com.ts_xiaoa.ts_recycler_view.BaseViewHolder
  * email：443502578@qq.com
  * desc：recyclerView adapter 基类
  */
-abstract class RvSingleTypeAdapter<Data>(dataList: MutableList<Data?>? = null) :
+abstract class RvSingleTypeAdapter<Data>(dataList: MutableList<Data>? = null) :
 
     RecyclerView.Adapter<BaseViewHolder>() {
 
@@ -23,11 +23,11 @@ abstract class RvSingleTypeAdapter<Data>(dataList: MutableList<Data?>? = null) :
     protected var context: Context? = null
 
     //数据集合
-    private var dataList: MutableList<Data?>
+    private var dataList: MutableList<Data>
 
     //item点击监听
-    var onItemClickListener: ((view: View, position: Int, data: Data?) -> Unit)? = null
-    var onItemChildClickListener: ((view: View, position: Int, data: Data?) -> Unit)? = null
+    var onItemClickListener: ((view: View, position: Int, data: Data) -> Unit)? = null
+    var onItemChildClickListener: ((view: View, position: Int, data: Data) -> Unit)? = null
 
     //主构造函数
     init {
@@ -100,7 +100,7 @@ abstract class RvSingleTypeAdapter<Data>(dataList: MutableList<Data?>? = null) :
     protected abstract fun onBindItem(
         holder: BaseViewHolder,
         rootBinding: ViewDataBinding?,
-        item: Data?
+        item: Data
     )
 
     //绑定布局
@@ -114,13 +114,13 @@ abstract class RvSingleTypeAdapter<Data>(dataList: MutableList<Data?>? = null) :
     protected open fun onBindItemPayLoad(
         holder: BaseViewHolder,
         rootBinding: ViewDataBinding?,
-        item: Data?
+        item: Data
     ) {
 
     }
 
     //获取数据集合
-    open fun getData(): MutableList<Data?> {
+    open fun getData(): MutableList<Data> {
         return this.dataList
     }
 
