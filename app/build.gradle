@@ -40,7 +40,7 @@ dependencies {
 //    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_glide:1.0.1'
 
 
-    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_ui:1.0.5'
+//    implementation 'com.gitee.ts_xiaoa.Ts-Android-Library:ts_ui:1.0.5'
 
     //kotlin ktx lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
