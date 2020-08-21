@@ -55,8 +55,6 @@ abstract class TsBaseActivity : AppCompatActivity() {
         //设置全屏模式
         StatusBarUtil.fullScreen(this)
         val layoutConfig = getLayoutConfig()
-
-
         if (layoutConfig.hasAppbarLayout) {
             val binding: TsActivityBaseBinding =
                 DataBindingUtil.setContentView(this, R.layout.ts_activity_base)

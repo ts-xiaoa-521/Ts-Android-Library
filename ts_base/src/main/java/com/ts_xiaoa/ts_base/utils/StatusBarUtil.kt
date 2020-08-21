@@ -14,7 +14,6 @@ import android.view.*
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
 import androidx.annotation.IntRange
-import com.ts_xiaoa.ts_base.R
 import com.ts_xiaoa.ts_base.provider.ApplicationProvider
 import java.util.*
 
@@ -335,7 +334,7 @@ object StatusBarUtil {
             //获取状态栏的高度
             val resourceId = activity.resources.getIdentifier("status_bar_height", "dimen", "android")
             statusBarHeight = activity.resources.getDimensionPixelSize(resourceId)
-            val content = activity.findViewById<View>(R.id.content) as FrameLayout
+            val content = activity.findViewById<View>(android.R.id.content) as FrameLayout
             mChildOfContent = content.getChildAt(0)
             val attributes: WindowManager.LayoutParams = activity.window.attributes
             if (attributes.softInputMode and WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE == WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE) {
